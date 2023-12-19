@@ -9,7 +9,7 @@ import LearnToday from "../components/landing/LearnToday";
 
 const MyComponent = (props) => {
   return (
-    <div className="flex flex-col w-screen items-stretch">
+    <div className="flex flex-col w-screen items-stretch overflow-hidden">
       <HeroSection />
       <Container>
         <DemoCTA />
