@@ -2,7 +2,7 @@ import * as React from "react";
 
 const HeroSection = (props) => {
   return (
-    <div className="flex-col overflow-hidden relative flex min-h-[921px] justify-center items-center px-16 py-12 max-md:px-5">
+    <div className="flex-col overflow-hidden relative flex h-[50vh] justify-center items-center px-16 py-12 max-md:px-5">
       <img
         loading="lazy"
         srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e1f425804014cfba62fa7270a7217924c01bd045a8b1bea3fa659cdf232aaca3?apiKey=15589348c8884353aa1a6f32b20bd58b&"
