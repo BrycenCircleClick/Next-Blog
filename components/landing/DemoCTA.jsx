@@ -10,7 +10,7 @@ const DemoCTA = (props) => {
           borderRadius: "1551.722px",
           background:
             "linear-gradient(180deg, #E7326A 0%, #FF292F 24.48%, #FF7B01 56.77%, #F2DE02 85.94%, #AEF61C 98.44%)",
-          filter: "blur(257px)  ",
+          filter: "blur(257px)",
         }}
       />
       <header className="self-center flex items-center justify-between gap-5 max-md:max-w-full max-md:flex-wrap max-sm:justify-center text-center">
@@ -25,7 +25,7 @@ const DemoCTA = (props) => {
         </button>
       </header>
 
-      <div className="text-zinc-900 text-7xl max-w-8xl leading-[93px]   max-md:text-4xl max-md:leading-10 max-md:mt-10 max-sm:text-center max-sm:mt-5">
+      <div className="text-zinc-900 text-7xl max-w-8xl leading-[50px]   max-md:text-4xl max-md:leading-6 max-md:mt-10 max-sm:text-center max-sm:mt-5">
         <span className="" role="heading" aria-level="1">
           The Future of <br className="" />
           upskilling

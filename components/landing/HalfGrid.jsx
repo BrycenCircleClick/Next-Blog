@@ -1,11 +1,11 @@
 import React from "react";
 
-const ManGrid = ({ image1, image2, image3, image4 }) => {
+const HalfGrid = () => {
   const vMan =
     "https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e505ba8d075fc996b2133fe96ce368b420a92d54d5d5c70e3376f9d73e510e34?apiKey=15589348c8884353aa1a6f32b20bd58b&";
 
   const gridContainersDiv =
-    "flex flex-col relative  w-[40vmin] h-[40vmin] justify-center items-center border-black/30 border-l-[1px]  ";
+    "flex flex-col relative  w-[48vmin] h-[48vmin] md:w-[40vmin] justify-center items-center border-black/30 border-l-[1px]  ";
 
   const gridContainersH1 =
     "text-zinc-900 text-xs md:text-xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex";
@@ -15,12 +15,10 @@ const ManGrid = ({ image1, image2, image3, image4 }) => {
       <div className="w-screen h-[1px] bg-black/30" />
       <div className="topRow w-full justify-center  flex items-center h-fit flex-row max-md:max-w-full max-md:flex-wrap ">
         <div className={`${gridContainersDiv}`}>
-          {!image1 && (
-            <h1 className={gridContainersH1}>
-              Our AI-powered solution optimizes your supply chain by analyzing
-              data, identify inefficiencies, and providing actionable insights.
-            </h1>
-          )}
+          <h1 className={gridContainersH1}>
+            Our AI-powered solution optimizes your supply chain by analyzing
+            data, identify inefficiencies, and providing actionable insights.
+          </h1>
         </div>
         <div
           className={`bg-white border-black/30 border-r-[1px]  ${gridContainersDiv}`}
@@ -46,28 +44,10 @@ const ManGrid = ({ image1, image2, image3, image4 }) => {
         </div>
       </div>
       <div className="w-screen h-[1px] bg-black/30" />
-      <div className="w-full justify-center flex items-center flex-col md:flex-row  max-md:max-w-full max-md:flex-wrap ">
-        {" "}
-        <div className="w-full  justify-center flex items-center  flex-row  max-md:max-w-full max-md:flex-wrap ">
-          <div className={gridContainersDiv}>
-            <h1 className={gridContainersH1}>
-              Our AI-powered solution optimizes your supply chain by analyzing
-              data, identify inefficiencies, and providing actionable insights.
-            </h1>
-          </div>{" "}
-          <div
-            className={`border-black/30 border-r-[1px] ${gridContainersDiv}`}
-          >
-            <h1 className={gridContainersH1}>
-              Our AI-powered solution optimizes your supply chain by analyzing
-              data, identify inefficiencies, and providing actionable insights.
-            </h1>
-          </div>
-        </div>
-      </div>
+
       <div className="w-screen h-[1px] bg-black/30" />
     </div>
   );
 };
 
-export default ManGrid;
+export default HalfGrid;
