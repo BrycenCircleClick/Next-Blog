@@ -13,7 +13,7 @@ const HeroSection = (props) => {
           {" "}
           Capture each &{" "}
         </header>
-        <h1 className="text-center text-8xl leading-[90px] bg-clip-text mt-2.5 mx-6 max-md:max-w-full max-md:text-4xl max-md:mr-2.5 font-bold">
+        <h1 className="text-center text-8xl leading-[90px] bg-clip-text mt-2.5 max-md:max-w-full max-md:text-4xl font-bold">
           <span
             style={{
               background:

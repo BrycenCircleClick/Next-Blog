@@ -25,11 +25,11 @@ const DemoCTA = (props) => {
         </button>
       </header>
 
-      <div className="text-zinc-900 text-7xl max-w-8xl leading-[50px]   max-md:text-4xl max-md:leading-6 max-md:mt-10 max-sm:text-center max-sm:mt-5">
+      <div className="text-zinc-900 text-7xl max-w-8xl leading-[50px]   max-md:text-4xl max-md:leading-10 max-md:mt-10  max-sm:text-left ">
         <span className="" role="heading" aria-level="1">
           The Future of <br className="" />
           upskilling
-          <span className="font-bold"> is here.</span>
+          <p className="font-bold"> is here.</p>
         </span>
         <span className="leading-[93px]"></span>
       </div>

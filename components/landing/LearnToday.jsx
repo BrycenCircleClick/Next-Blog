@@ -41,14 +41,14 @@ const LearnToday = ({ header, h1, h2, body, button }) => {
           </h2>
         )}
         {body != "" && (
-          <div className="text-zinc-900 text-lg font-medium leading-8 self-stretch w-full mt-3 max-md:max-w-full max-md:mt-10">
+          <div className="text-zinc-900 text-lg font-medium leading-8 self-stretch w-full mt-3 max-md:max-w-full max-md:mt-5">
             {body}
           </div>
         )}
         {button != "" && (
           <a
             href="#"
-            className="text-white text-2xl font-medium whitespace-nowrap justify-center items-stretch shadow-2xl bg-zinc-900 mt-11 px-14 py-5 rounded-3xl self-start max-md:mt-10 max-md:px-5 max-sm:text-center max-sm:self-center max-sm:w-[199.5px] max-sm:mt-12"
+            className="text-white text-xl font-medium whitespace-nowrap justify-center items-stretch shadow-2xl bg-zinc-900 mt-11 px-10 py-3 rounded-3xl self-start max-md:mt-10 max-md:px-5 max-sm:text-center max-sm:self-center max-sm:w-[50vw] max-sm:mt-10"
           >
             {button}
           </a>

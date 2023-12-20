@@ -15,7 +15,7 @@ const ManGrid = () => {
       <div className="w-screen h-[1px] my-[-1px] bg-black/30" />
       <div className="w-[80vmin] h-fit mx-auto grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2 ">
         <div className="flex justify-center items-center  md:w-[40vmin] w-[80vw] h-[80vw]  md:h-[40vmin] border-[1px] border-black/30 mr-0 md:mr-[-1px]">
-          <p className="text-zinc-900 text-2xl md:text-3xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex ">
+          <p className="text-zinc-900 text-xl md:text-2xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex font-medium">
             {" "}
             Our AI-powered solution optimizes your supply chain by analyzing
             data, identify inefficiencies, and providing actionable insights.
@@ -31,13 +31,13 @@ const ManGrid = () => {
             />
 
             <div className="relative flex flex-col items-stretch mt-44 mb-36 max-md:my-10">
-              <div className="text-zinc-100 text-center text-4xl leading-[51.6px] self-center w-[243px]">
+              <div className="text-zinc-100 text-center text-3xl leading-[31.6px] self-center w-[243px]">
                 Get up to
               </div>
-              <div className="text-zinc-100 text-7xl leading-[52.26px] self-center whitespace-nowrap mt-2 max-md:text-4xl">
+              <div className="text-zinc-100 text-5xl leading-[32.26px] self-center whitespace-nowrap mt-2 max-md:text-4xl">
                 3x
               </div>
-              <div className="text-zinc-100 text-center text-4xl leading-[51.6px] whitespace-nowrap mt-6">
+              <div className="text-zinc-100 text-center text-3xl leading-[31.6px] whitespace-nowrap mt-6">
                 faster learning
               </div>
             </div>
@@ -47,14 +47,14 @@ const ManGrid = () => {
       <div className="w-screen h-[1px]  my-[-1px] bg-black/30" />
       <div className="w-[80vmin] h-fit mx-auto grid md:grid-cols-2 md:grid-rows-1 grid-cols-1 grid-rows-2">
         <div className="flex justify-center items-center md:w-[40vmin] w-[80vw] h-[80vw]  md:h-[40vmin] border-[1px] border-black/30 mr-0 md:mr-[-1px]">
-          <p className="text-zinc-900 text-2xl md:text-3xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex">
+          <p className="text-zinc-900 text-xl md:text-2xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex   font-medium ">
             {" "}
             Our AI-powered solution optimizes your supply chain by analyzing
             data, identify inefficiencies, and providing actionable insights.
           </p>
         </div>
         <div className="flex justify-center items-center md:w-[40vmin] w-[80vw] h-[80vw]  md:h-[40vmin] border-[1px] border-black/30 mr-0 md:ml-[-1px]">
-          <p className="text-zinc-900 text-2xl md:text-3xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex">
+          <p className="text-zinc-900 text-xl md:text-2xl lg:text-3xl p-4 text-center relative box-border max-md:max-w-full max-sm:text-center max-sm:aspect-[1:1px] self-center flex font-medium">
             {" "}
             Our AI-powered solution optimizes your supply chain by analyzing
             data, identify inefficiencies, and providing actionable insights.
