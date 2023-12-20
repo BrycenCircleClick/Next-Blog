@@ -7,7 +7,7 @@ const LearnToday = ({ header, h1, h2, body, button }) => {
       {" "}
       <div className="flex max-w-5xl flex-col px-5">
         {header != "" && (
-          <span className="text-xl font-bold leading-5  self-stretch w-full mt-5 max-md:max-w-full max-sm:text-left max-sm:mt-5">
+          <span className="text-xl font-bold leading-5  self-stretch w-full mt-5 max-md:max-w-full max-sm:text-left max-sm:mt-5 ">
             <span
               style={{
                 background:
