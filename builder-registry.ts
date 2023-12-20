@@ -41,3 +41,10 @@ Builder.registerComponent(
     name: "HeaderText",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/landing/ManGrid")),
+  {
+    name: "ManGrid",
+  }
+);

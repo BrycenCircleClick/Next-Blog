@@ -55,7 +55,7 @@ const MyComponent = (props) => {
       <LearnToday
         header="How it works"
         h1="Tomorrow's jobs need"
-        h2="tomorrows education."
+        h2="Tomorrows education."
         body=""
         button=""
       />

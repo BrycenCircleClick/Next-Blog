@@ -22,12 +22,12 @@ const LearnToday = ({ header, h1, h2, body, button }) => {
         )}
 
         {h1 != "" && (
-          <h1 className="text-zinc-900 text-7xl font-semibold leading-[90px] self-stretch w-full mt-5 max-md:max-w-full max-md:text-4xl max-sm:font-semibold">
+          <h1 className="text-zinc-900 text-4xl md:text-6xl lg:text-7xl font-semibold leading-[43px] md:leading-[53px] lg:leading-[86px] self-stretch w-full mt-5 max-md:max-w-full max-sm:font-semibold">
             {h1}
           </h1>
         )}
         {h2 != "" && (
-          <h2 className="text-zinc-900 text-7xl font-semibold leading-[90px] self-stretch w-full max-md:max-w-full max-md:text-4xl">
+          <h2 className="text-zinc-900 text-4xl md:text-6xl lg:text-7xl font-semibold leading-[43px] md:leading-[53px] lg:leading-[86px] self-stretch w-full  max-md:max-w-full">
             <span
               style={{
                 background:
