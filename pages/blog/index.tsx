@@ -1,90 +1,106 @@
-import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
-import HeroPost from '../../components/hero-post'
-import Intro from '../../components/intro'
-import Layout from '../../components/layout'
-import { getAllPosts } from '../../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import Post from '../../interfaces/post'
-import { motion, useScroll, MotionValue, useTransform, useMotionValueEvent} from 'framer-motion'
-import { useRef } from 'react'
+import React, { useEffect, useState, useRef } from "react";
 
+const NewBlogsection = () => {
+  const [posts, setPosts] = useState([]);
+  const blogRef = useRef(null);
 
-type Props = {
-  allPosts: Post[]
-}
+  useEffect(() => {
+    // Function to handle the intersection callback
+    const handleIntersection = (entries) => {
+      if (entries[0].isIntersecting) {
+        // The footer is in view, fetch data or perform your action here
+        fetch("https://ahuraai.com/wp-json/wp/v2/posts?per_page=3")
+          .then((response) => response.json())
+          .then((posts) => {
+            Promise.all(
+              posts.map((post) =>
+                fetch(post._links["wp:featuredmedia"][0].href)
+                  .then((response) => response.json())
+                  .then((media) => ({
+                    ...post,
+                    featuredImageUrl: media.source_url,
+                  }))
+              )
+            ).then((posts) => setPosts(posts));
+          })
+          .catch((error) => console.error("Error fetching posts:", error));
 
+        // Disconnect the observer since you only need it once
+        observer.disconnect();
+      }
+    };
 
+    // Create an Intersection Observer instance
+    const observer = new IntersectionObserver(handleIntersection);
 
+    // Observe the footer element
+    if (blogRef.current) {
+      observer.observe(blogRef.current);
+    }
 
-
-
-export default function Index({ allPosts }: Props) {
-
-
-    const target = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target,
-        offset: ['start end', 'end start'],
-    });
-    const parallax = useTransform(scrollYProgress, [0, 1], [-500, 500]);
-    const reverseParallax = useTransform(parallax, (v) => -v);
-    const lax = useTransform(scrollYProgress, [.5, 1], [1, 3]);
-    const laxPosts = useTransform(scrollYProgress, [.5, 1], [100, 0]);
-
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
-
-console.log(parallax)
-console.log(reverseParallax)
+    // Cleanup: Disconnect the observer when the component unmounts
+    return () => {
+      if (blogRef.current) {
+        observer.unobserve(blogRef.current);
+      }
+    };
+  }, []);
+  const formatDate = (dateString) => {
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    const event = new Date(dateString);
+    return event.toLocaleDateString("en-GB", options);
+  };
+  const decodeHtmlEntities = (text) => {
+    const textArea = document.createElement("textarea");
+    textArea.innerHTML = text;
+    return textArea.value;
+  };
   return (
-    <>
-      <Layout>
- 
-
-        <Container>   
-          <Intro />
- <div  ref={target} className="z-0">         {heroPost && (
-         
-
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-              reverseParallax={reverseParallax}
-              lax={lax}
-            />
-          )}
+    <div className="flex flex-col items-center px-1 md:px-5" ref={blogRef}>
+      <div className=" w-full   max-md:mt-5 ">
+        <div className="gap-5 flex flex-row  md:flex-nowrap w-full max-w-7xl self-center mx-auto items-stretch align-middle justify-center max-md:items-stretch max-md:gap-0">
+          {posts.map((post, i) => (
+            <div
+              key={post.id}
+              className={`post-animation border bg-white flex grow flex-col w-full  pb-11  border-solid border-zinc-400   my-5 ${
+                i == 0 ? "" : i == 1 ? "" : "flex md:hidden lg:flex"
+              }`}
+            >
+              <img
+                loading="lazy"
+                alt={post.title.rendered}
+                src={post.featuredImageUrl}
+                className="blogImages object-contain object-center  overflow-hidden self-stretch "
+              />
+              <div className="flex items-stretch gap-3 ml-7 mt-8 self-start max-md:justify-center max-md:ml-2.5">
+                <div className="text-zinc-900 text-base font-medium leading-5 tracking-wider uppercase self-center grow whitespace-nowrap mb-2">
+                  {formatDate(post.date)}
                 </div>
-          {morePosts.length > 0 &&
-          
-          
-          <MoreStories posts={morePosts} parallax={laxPosts}/>
+              </div>
+              <div className="text-zinc-900 text-2xl font-bold  ml-7 self-start max-md:ml-2.5">
+                {decodeHtmlEntities(post.title.rendered).replace(
+                  /<[^>]+>/g,
+                  ""
+                )}
+              </div>
+              <div className="text-zinc-900 text-base leading-7  mx-7 self-start max-md:ml-2.5 mb-2">
+                {decodeHtmlEntities(post.excerpt.rendered).replace(
+                  /<[^>]+>/g,
+                  ""
+                )}
+              </div>
+              <a
+                href={post.link}
+                className="text-zinc-900 text-lg font-medium leading-7 underline whitespace-nowrap ml-7 mt-auto self-start max-md:ml-2.5"
+              >
+                View Post
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-          
-          
-          }
-        </Container>
-      </Layout>
-    </>
-  )
-}
-
-export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
-
-  return {
-    props: { allPosts },
-  }
-}
+export default NewBlogsection;
