@@ -97,7 +97,7 @@ const navigationData = [{
   name: 'Product', dropdown: [
 
     { name: 'Ahura 1.0', href: 'https://ahura.ai/' },
-    { name: 'Ahura 2.0', href: 'https://info.ahuraai.com/product' },
+    { name: 'Ahura 2.0', href: '/product' },
   ]
 },
 {
@@ -133,7 +133,7 @@ const navigationData = [{
       dropdown: [
         {
           name: "Davos 2024: The AI & Crypto Lounge",
-          href: "https://info.ahuraai.com/davos2024",
+          href: "/davos2024",
         },
         {
           name: "Necker Legacy Guardians",

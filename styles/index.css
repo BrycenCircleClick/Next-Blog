@@ -135,3 +135,151 @@ a:hover {
   color: transparent;
   text-decoration: none;
 }
+
+.cms-react-boilerplate {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+.header__container {
+  display: none !important;
+}
+
+.custom-navbar {
+  transition: all 2s ease;
+}
+
+@media screen and (max-width: 1020px) {
+  .custom-navbar .mobile-menu-button {
+    display: none; /* Hide mobile menu button */
+  }
+  .custom-navbar .desktop-menu {
+    display: flex; /* Show desktop menu items */
+  }
+  .desktop-menu .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1020px) {
+  .custom-navbar .mobile-menu-hide {
+    display: none; /* Hide mobile menu button */
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .CTA-hide {
+    display: none;
+  }
+  .break-blog-2-footer {
+    display: none;
+  }
+}
+a:hover {
+  text-decoration: underline;
+}
+/* TW Small */
+@media screen and (max-width: 768px) {
+  .clamp-grid-text {
+    font-size: clamp(16px, 4vw, 20px);
+    padding: clamp(10px, 5vw, 50px);
+  }
+  .clamp-grid-product {
+    font-size: clamp(30px, 8vw, 70px);
+    line-height: clamp(30px, 8vw, 70px);
+  }
+  .clamp-product-header {
+    font-size: clamp(20px, 5vw, 50px);
+    line-height: clamp(20px, 5vw, 50px);
+  }
+  .clamp-product-form {
+    font-size: clamp(20px, 4.5vw, 40px);
+    line-height: clamp(20px, 4.5vw, 40px);
+  }
+  .clamp-CTA {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+}
+
+/* TW Medium */
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .clamp-grid-text {
+    font-size: clamp(16px, 1.8vw, 18px);
+    padding: clamp(16px, 5vw, 50px);
+  }
+  .clamp-grid-product {
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: clamp(30px, 4vw, 40px);
+  }
+  .clamp-product-header {
+    font-size: clamp(50px, 6vw, 50px);
+    line-height: clamp(50px, 6vw, 50px);
+  }
+  .clamp-product-form {
+    font-size: clamp(40px, 4vw, 40px);
+    line-height: clamp(40px, 4vw, 40px);
+  }
+  .clamp-CTA {
+    font-size: clamp(20px, 2.5vw, 23px);
+  }
+}
+
+/* TW Large */
+@media screen and (min-width: 1020px) {
+  .clamp-grid-text {
+    font-size: clamp(18px, 1.7vw, 30px);
+    padding: clamp(16px, 5vw, 60px);
+  }
+  .clamp-grid-product {
+    font-size: clamp(40px, 4vw, 70px);
+    line-height: clamp(40px, 4vw, 70px);
+  }
+  .clamp-product-header {
+    font-size: clamp(40px, 5vw, 80px);
+    line-height: clamp(40px, 5vw, 100px);
+  }
+  .clamp-product-form {
+    font-size: clamp(50px, 4vw, 60px);
+    line-height: clamp(55px, 4vw, 60px);
+  }
+
+  .clamp-CTA {
+    font-size: clamp(23px, 2.3vw, 45px);
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(-20px); /* or any other initial position */
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Define the animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0%);
+  }
+}
+
+/* Apply the animation to the post elements */
+.post-animation {
+  animation: fadeInScale 1s ease-in-out;
+}

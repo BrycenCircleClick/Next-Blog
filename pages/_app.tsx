@@ -38,7 +38,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div className="font-normal min-h-screen flex flex-col align-middle justify-center text-base font-inter text-[#111]">
+    <div
+      id="react-app"
+      className="cms-react-boilerplate font-normal min-h-screen flex flex-col align-middle justify-center text-base font-inter text-[#111]"
+    >
       <Layout>
         <Component {...pageProps} data={data} />
       </Layout>
