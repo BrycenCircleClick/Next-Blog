@@ -97,7 +97,7 @@ const navigationData = [{
   name: 'Product', dropdown: [
 
     { name: 'Ahura 1.0', href: 'https://ahura.ai/' },
-    { name: 'Ahura 2.0', href: '/product' },
+    { name: 'Ahura 2.0', href: '/Ahura-AI-v2' },
   ]
 },
 {

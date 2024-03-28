@@ -1,12 +1,12 @@
-import Container from './container';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import React, { useRef } from 'react';
+import Container from "./Container";
+import { motion, useScroll, useTransform } from "framer-motion";
+import React, { useRef } from "react";
 
 const Hero = () => {
   const target = useRef(null);
   const { scrollYProgress } = useScroll({
     target,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const parallax = useTransform(scrollYProgress, [0, 1], [200, -400]);
   const reverseParallax = useTransform(parallax, (v) => -v);
@@ -18,17 +18,17 @@ const Hero = () => {
         <motion.div
           className="absolute top-[-200px] right-[-300px] h-[800px] w-[800px] opacity-80 z-[-10] "
           style={{
-            borderRadius: '805.491px',
+            borderRadius: "805.491px",
             background:
-              'linear-gradient(180deg, #E7326A 0%, #FF292F 24.48%, #FF7B01 56.77%, #F2DE02 85.94%, #AEF61C 98.44%)',
+              "linear-gradient(180deg, #E7326A 0%, #FF292F 24.48%, #FF7B01 56.77%, #F2DE02 85.94%, #AEF61C 98.44%)",
 
             scale: lax,
-            transition: 'scale ease 0.5s',
+            transition: "scale ease 0.5s",
           }}
-          initial={{ opacity: 0, filter: `blur(0px)`, x: '200px' }}
-          animate={{ opacity: 0.8, filter: `blur(107px)`, x: '0px' }}
+          initial={{ opacity: 0, filter: `blur(0px)`, x: "200px" }}
+          animate={{ opacity: 0.8, filter: `blur(107px)`, x: "0px" }}
           transition={{ duration: 1 }}
-        />{' '}
+        />{" "}
         <div className="w-full z-10 max-w-[1457px] mt-12 mb-9 max-md:max-w-full max-md:mt-10">
           <div className="gap-5 flex flex-col lg:flex-row max-md:items-stretch max-md:gap-0">
             <div className="flex z-10 flex-col items-stretch w-full max-md:ml-0">
@@ -37,36 +37,36 @@ const Hero = () => {
                   <span
                     style={{
                       background:
-                        'linear-gradient(90deg, #E7326A -0.59%, #FF292F 21.06%, #FF7B01 49.62%, #F2DE02 75.41%, #AEF61C 86.46%)',
-                      backgroundClip: 'text',
-                      color: 'transparent',
-                      rotate: '90deg',
+                        "linear-gradient(90deg, #E7326A -0.59%, #FF292F 21.06%, #FF7B01 49.62%, #F2DE02 75.41%, #AEF61C 86.46%)",
+                      backgroundClip: "text",
+                      color: "transparent",
+                      rotate: "90deg",
                     }}
                   >
-                    Ahura AI House{' '}
+                    Ahura AI House{" "}
                   </span>
                 </header>
                 <div className="text-zinc-900 z-10 text-4xl md:text-6xl lg:text-6xl font-black  uppercase mt-4 max-md:max-w-full  ">
-                  {' '}
+                  {" "}
                   Welcome To
                   <br />
                   <span
                     style={{
                       background:
-                        'linear-gradient(90deg, #E7326A -0.59%, #FF292F 21.06%, #FF7B01 49.62%, #F2DE02 75.41%, #AEF61C 86.46%)',
-                      backgroundClip: 'text',
-                      color: 'transparent',
+                        "linear-gradient(90deg, #E7326A -0.59%, #FF292F 21.06%, #FF7B01 49.62%, #F2DE02 75.41%, #AEF61C 86.46%)",
+                      backgroundClip: "text",
+                      color: "transparent",
                     }}
                   >
                     DAVOS 2024
                   </span>
                 </div>
                 <div className="text-black text-2xl font-bold  uppercase mt-5 md:mt-10 max-md:max-w-full">
-                  {' '}
-                  LEADING THE GLOBAL CONVERSATION ON Responsible AI{' '}
+                  {" "}
+                  LEADING THE GLOBAL CONVERSATION ON Responsible AI{" "}
                 </div>
                 <div className="text-zinc-900 text-md md:text-lg mt-6 max-md:max-w-full">
-                  {' '}
+                  {" "}
                   AI has been the talk of the town during the Annual Meeting of
                   the World Economic Forum 2023 and the conversation has only
                   accelerated since then. Today, there is an urgent need for a
@@ -78,9 +78,9 @@ const Hero = () => {
                   leading figures across disciplines to engage in debates around
                   the most critical issues around Artificial Intelligence and to
                   discuss its potential for humankind. <div ref={target}></div>
-                  <br />{' '}
+                  <br />{" "}
                   <div className="flex w-full">
-                    {' '}
+                    {" "}
                     <a
                       className="text-zinc-900 text-lg text-center md:text-left font-light whitespace-nowrap justify-center items-center border self-center rounded-3xl lg:rounded-[60px] border-solid border-zinc-900 max-w-[75vw] w-[75vw] md:w-fit my-5 md:my-0 px-4 lg:px-8 py-2 lg:py-4 mx-auto md:mx-0 hover:bg-zinc-900 hover:text-zinc-200 hover:no-underline hover:font-normal transition-all duration-200 hover:shadow-xl"
                       role="button"
@@ -88,10 +88,10 @@ const Hero = () => {
                       onClick={(e) => {
                         e.preventDefault(); // Prevent the default anchor link behavior
                         const scheduleSection =
-                          document.getElementById('schedule');
+                          document.getElementById("schedule");
                         if (scheduleSection) {
                           scheduleSection.scrollIntoView({
-                            behavior: 'smooth',
+                            behavior: "smooth",
                           });
                         }
                       }}
@@ -107,7 +107,7 @@ const Hero = () => {
                 <motion.div className=" relative w-full md:w-3/4 mx-auto lg:w-[400px] h-[800px] max-w-[70vw] flex flex-col  max-md:gap-0 ">
                   <motion.div
                     className="flex  relative top-0 left-0 z-50 flex-col items-stretch h-full   max-md:ml-0"
-                    initial={{ transform: 'translate(0%, 20%)' }}
+                    initial={{ transform: "translate(0%, 20%)" }}
                     animate={{ transform: `translate(-10%, 20%)` }}
                     transition={{ duration: 1 }}
                   >
@@ -118,14 +118,14 @@ const Hero = () => {
                       animate={{
                         scale: [1, 1.1, 1],
                         transform: [
-                          'translate(0%,0%)',
-                          'translate(0%, 30%)',
-                          'translate(0%,0%)',
+                          "translate(0%,0%)",
+                          "translate(0%, 30%)",
+                          "translate(0%,0%)",
                         ],
                       }}
                       transition={{
                         duration: 5,
-                        ease: 'easeInOut',
+                        ease: "easeInOut",
                         times: [0, 0.5, 1],
                         repeat: Infinity,
                         repeatDelay: 5,
@@ -143,7 +143,7 @@ const Hero = () => {
                   </motion.div>
                   <motion.div
                     className="flex relative  flex-col items-stretch h-full  w-full max-md:ml-0"
-                    initial={{ transform: 'none' }}
+                    initial={{ transform: "none" }}
                     animate={{ transform: `translate(10%, 0%)` }}
                     transition={{ duration: 1 }}
                   >
@@ -154,14 +154,14 @@ const Hero = () => {
                       animate={{
                         scale: [1, 1.5, 1],
                         transform: [
-                          'translate(0%,0%)',
-                          'translate(0%, -70%)',
-                          'translate(0%,0%)',
+                          "translate(0%,0%)",
+                          "translate(0%, -70%)",
+                          "translate(0%,0%)",
                         ],
                       }}
                       transition={{
                         duration: 5,
-                        ease: 'easeInOut',
+                        ease: "easeInOut",
                         times: [0, 0.5, 1],
                         repeat: Infinity,
                         repeatDelay: 4,
@@ -181,8 +181,8 @@ const Hero = () => {
                 </motion.div>
               </div>
             </div>
-          </div>{' '}
-        </div>{' '}
+          </div>{" "}
+        </div>{" "}
       </Container>
     </motion.div>
   );
