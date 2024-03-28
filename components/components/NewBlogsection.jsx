@@ -55,6 +55,11 @@ const NewBlogsection = () => {
     textArea.innerHTML = text;
     return textArea.value;
   };
+  const makeRelativeUrl = (absoluteUrl) => {
+    const url = new URL(absoluteUrl);
+    return `/blog${url.pathname}`;
+  };
+
   return (
     <div className="flex flex-col items-center px-1 md:px-5" ref={blogRef}>
       <h1 className="text-zinc-900 text-center text-xl md:text-3xl lg:text-4xl font-bold  w-full px-1 md:px-5 mt-5">
@@ -92,7 +97,7 @@ const NewBlogsection = () => {
                 )}
               </div>
               <a
-                href={post.link}
+                href={makeRelativeUrl(post.link)}
                 className="text-zinc-900 text-lg font-medium leading-7 underline whitespace-nowrap ml-7 mt-auto self-start max-md:ml-2.5"
               >
                 View Post

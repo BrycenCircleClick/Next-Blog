@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/components/Navbar.jsx";
 import Footer from "../components/components/Footer.jsx";
 import "../styles/index.css"; // Assuming your global CSS is correctly placed
+import Layout from "../components/layout.tsx";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [data, setData] = useState(null); // Moved state to _app to provide data to all pages
@@ -38,10 +39,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className="font-normal min-h-screen flex flex-col align-middle justify-center text-base font-inter text-[#111]">
-      <Navbar />
-      {/* Pass the fetched data to components as needed using props or a context provider */}
-      <Component {...pageProps} data={data} />
-      <Footer />
+      <Layout>
+        <Component {...pageProps} data={data} />
+      </Layout>
     </div>
   );
 }

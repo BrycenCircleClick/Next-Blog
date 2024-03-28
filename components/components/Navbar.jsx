@@ -93,14 +93,20 @@ const ItemWithFadeIn = ({
   );
 };
 // Placeholder JSON data for navigation
-const navigationData = [{ name: 'Product', href: 'https://ahura.ai/' },
+const navigationData = [{
+  name: 'Product', dropdown: [
+
+    { name: 'Ahura 1.0', href: 'https://ahura.ai/' },
+    { name: 'Ahura 2.0', href: 'https://info.ahuraai.com/product' },
+  ]
+},
 {
   name: "Solutions",
   dropdown: [
-    {
+/*     {
       name: "Employee Retention",
       href: "https://ahuraai.com/new-increase-retention/",
-    }, {
+    }, */ {
       name: "AI Tutor",
       dropdown: [
         {
@@ -142,8 +148,8 @@ const navigationData = [{ name: 'Product', href: 'https://ahura.ai/' },
 {
   name: "Thinking",
   dropdown: [
-    { name: "Success Stories", href: "/success-stories/" },
-    { name: "Blog", href: "/blog/" },
+    { name: "Blog", href: "/blog/" }, { name: "Success Stories", href: "/success-stories/" },
+
     { name: "How We Learn", href: "/blog/how-i-learn/" },
   ],
 },
@@ -157,7 +163,7 @@ const navigationData = [{ name: 'Product', href: 'https://ahura.ai/' },
     { name: "Privacy Policy", href: "https://ahura.ai/privacy-policy" },
     { name: "Terms of Use", href: "https://ahura.ai/terms-and-conditions" },
   ],
-}, { name: 'Ahura 2.0', href: 'https://info.ahuraai.com/product' },
+},
 ];
 
 function classNames(...classes) {
@@ -232,7 +238,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="custom-navbar  bg-black/80 absolute z-[1000] transition-all duration-1000 h-fit top-0 left-0 right-0 shadow-xl shadow-black/80"
+      className="custom-navbar  bg-black/95 absolute z-[1000] transition-all duration-1000 h-fit top-0 left-0 right-0 shadow-xl shadow-black/80"
     >
       {({ open }) => (
         <>
@@ -241,7 +247,7 @@ export default function Navbar() {
               {/* Mobile menu button and company logo */}
               <div className="relative inset-y-0 left-0 flex items-center ">
                 {/* Mobile menu button */}
-                <Disclosure.Button as="div" className="mobile-menu-hide inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-black/80 transition-all duration-200 focus:outline-none ">
+                <Disclosure.Button as="div" className="mobile-menu-hide inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-black/95 transition-all duration-200 focus:outline-none ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <div

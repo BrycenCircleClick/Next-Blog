@@ -16,5 +16,5 @@
     "incremental": true
   },
   "exclude": ["*"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog/index.tsx", "components/more-stories.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog/index.jsx", "components/more-stories.tsx", "pages/blog/[...blog].jsx"]
 }

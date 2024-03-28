@@ -1,6 +1,11 @@
 const withBuilderDevTools = require("@builder.io/dev-tools/next")();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withBuilderDevTools({});
+const nextConfig = {
+  images: {
+    domains: ["ahuraai.com"], // Add your external image domains here
+  },
+  // Add other custom Next.js configurations here
+};
 
-module.exports = nextConfig;
+module.exports = withBuilderDevTools(nextConfig);
