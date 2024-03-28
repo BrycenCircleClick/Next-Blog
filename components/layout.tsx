@@ -1,7 +1,7 @@
 import Alert from "./alert";
-import Footer from "../components/components/footer";
+import Footer from "../components/components/Footer";
 import Meta from "./meta";
-import Navbar from "../components/components/navbar";
+import Navbar from "../components/components/Navbar";
 import Header from "./header";
 type Props = {
   preview?: boolean;
