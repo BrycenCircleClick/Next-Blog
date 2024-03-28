@@ -1,6 +1,6 @@
-import Container from './container';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import React, { useRef } from 'react';
+import Container from "./Container";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 const Venue = () => {
   const ref1 = useRef(null);
@@ -12,7 +12,7 @@ const Venue = () => {
 
   const { scrollYProgress } = useScroll({
     target,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
   const parallax = useTransform(scrollYProgress, [0, 1], [200, -400]);
   const reverseParallax = useTransform(parallax, (v) => -v);
@@ -27,9 +27,9 @@ const Venue = () => {
         ref={ref1}
         className="bg-white flex flex-col items-center  self-center w-full max-w-7xl"
         style={{
-          transform: isInView1 ? 'none' : 'translateY(200px)',
+          transform: isInView1 ? "none" : "translateY(200px)",
           opacity: isInView1 ? 1 : 0,
-          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
         }}
       >
         <h2 className="text-black text-lg md:text-2xl font-semibold  uppercase  max-md:max-w-full  max-sm:text-center pt-12 px-5">
@@ -48,22 +48,22 @@ const Venue = () => {
           ref={target}
           className="absolute top-[30%] left-[-300px] h-[800px] w-[800px]  z-[-10] "
           style={{
-            borderRadius: '805.491px',
+            borderRadius: "805.491px",
             background:
-              'linear-gradient(180deg, #E7326A 0%, #FF292F 24.48%, #FF7B01 56.77%, #F2DE02 85.94%, #AEF61C 98.44%)',
+              "linear-gradient(180deg, #E7326A 0%, #FF292F 24.48%, #FF7B01 56.77%, #F2DE02 85.94%, #AEF61C 98.44%)",
 
             scale: lax,
-            transition: 'all ease 0.5s',
+            transition: "all ease 0.5s",
           }}
-          animate={{ filter: `blur(107px)`, x: '0px' }}
+          animate={{ filter: `blur(107px)`, x: "0px" }}
           transition={{ duration: 1 }}
-        />{' '}
+        />{" "}
         <motion.section
           className="flex flex-col items-stretch"
           style={{
-            transform: isInView2 ? 'none' : 'translateY(200px)',
+            transform: isInView2 ? "none" : "translateY(200px)",
             opacity: isInView2 ? 1 : 0,
-            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
         >
           <div className="z-[1] flex w-full justify-between gap-5 items-end max-md:max-w-full max-lg:flex-wrap">

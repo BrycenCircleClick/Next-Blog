@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from './container';
+import React from "react";
+import Container from "./Container";
 
 const SponsorDeck = () => {
   return (
@@ -9,7 +9,7 @@ const SponsorDeck = () => {
           <div className="flex flex-col items-stretch lg:w-[65%] max-md:w-full max-md:ml-0">
             <div className="items-stretch flex flex-col my-auto max-md:max-w-full max-md:mt-10">
               <h1 className="text-white text-2xl font-light  max-md:max-w-full md:text-4xl  max-sm:text-left">
-                Interested in becoming part of the AI &amp;{' '}
+                Interested in becoming part of the AI &amp;{" "}
                 <b className="font-extrabold ">Blockchain Lounge?</b>
               </h1>
               <p className="text-white text-lg font-medium leading-7 mt-10 max-md:max-w-full">
@@ -27,7 +27,7 @@ const SponsorDeck = () => {
               <button className="justify-center self-center lg:self-start items-stretch bg-zinc-900 hover:bg-zinc-800 flex flex-col mt-16 px-4 py-4 rounded-lg max-md:mt-10 max-md:px-5 w-fit">
                 <span className="text-white text-center text-sm font-semibold whitespace-nowrap w-auto self-center">
                   <a href="https://21472314.fs1.hubspotusercontent-na1.net/hubfs/21472314/Davos%202024%20AI%20%26%20Crypto%20Lounge%20Sponsorship%20Opportunities.pdf">
-                    {' '}
+                    {" "}
                     Download Sponsorship Deck
                   </a>
                 </span>
